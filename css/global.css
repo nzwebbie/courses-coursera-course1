@@ -1,0 +1,157 @@
+/* Base Styles */
+
+body {
+  font-family: Verdana, Arial, Tahoma, sans-serif;
+  padding: 20px 3%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div#container {
+  position: relative;
+  padding: 0px;
+  width: 96%;
+  margin: auto;
+}
+
+h1#pageMainTitle {
+  font-size: 175%;
+  margin-bottom: 0;
+}
+
+h1#pageMainTitle, div.foodInfoInnerBox > h1 {
+  text-align: center;
+}
+
+div#menuSummariesRow {
+  position: relative;
+  width: 100%;
+}
+
+div.foodInfoOuterBox {
+  margin-top: 20px;
+  border: none;
+}
+
+div.foodInfoInnerBox {
+  float: left;
+  width: 96%;
+  border: solid 2px #000;
+  background-color: #FDFDF7;
+}
+
+div.foodInfoInnerBox > h1 {
+  font-size: 125%;
+  float: right;
+  padding: 5px 10px;
+  margin: 0px 0px 5px 0px;
+  border-left: solid 2px #000;
+  border-bottom: solid 2px #000;
+}
+
+div.foodInfoOuterBox p {
+  float: left;
+  margin-top: 0px;
+  padding: 5px 10px;
+  clear: right;
+}
+
+div.foodInfoInnerBox p:firstchild {
+  margin-top: 0px;
+  padding-top: 0px; /* only first element has no extra top padding. */
+  clear: right;
+}
+
+h1#section1Title {
+  background-color: beige;
+}
+
+h1#section2Title {
+  background-color: darkred;
+  color: #FFF;
+}
+
+h1#section3Title {
+  background-color: azure;
+}
+
+/*==================================================================*/
+/* Media Queries */
+
+/* Large devices only */
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    width: 33.33%;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    border: solid 1px #000;
+    background-color: #FDFDF7;
+  }
+  
+  #menu1InnerBox {
+    margin-right: 4%;
+  }
+  
+  #menu2InnerBox {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  
+  #menu3InnerBox {
+    margin-left: 4%;
+  }
+}
+
+/* Medium devices only (i.e. tablets) */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-6, .col-md-12 {
+    float: left;
+    border: solid 1px #000;
+    background-color: #FDFDF7;
+  }
+  
+  .col-md-6 {
+    width: 50%;
+  }
+
+  .col-md-12 {
+    width: 100%;
+  }
+
+  #menu1InnerBox {
+    width: 98%;
+    margin-right: 2%;
+  }
+
+  #menu2InnerBox {
+    width: 98%;
+    margin-left: 2%;
+  }
+
+  #menu3InnerBox {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Mobile devices */
+/* Float not needed, but I had to stipulate the 0px margins here */
+
+@media (max-width: 767px) {
+  #menu1InnerBox, #menu2InnerBox, #menu3InnerBox {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .col-sm-12 {
+    float: left;
+  }
+}
